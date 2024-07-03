@@ -1,4 +1,5 @@
 import './style.css';
+// import {createProject, createTodo, createProjectList} from './create.js';
 
 // create objects from stored data module (input:stored data, output:)
 // interact w DOM module, inputs from DOM => create/update object => 
@@ -9,7 +10,6 @@ import './style.css';
 
 
 // 
-
 const createProject = (title, description, todoList) => {
     return {
     title: title, 
@@ -148,7 +148,10 @@ function pageLoad(){
     const addProjectBtn = document.createElement("button");
     addProjectBtn.innerText = "Add";
     addProjectBtn.addEventListener("click", () => {
-        projectFormInput.value 
+        console.log(projectFormInput.value);
+        const newProject = createProject(projectFormInput.value, "description");
+        myprojectList.push(newProject)
+        console.log(myprojectList);
     })
 
     
