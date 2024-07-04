@@ -1,5 +1,5 @@
 import './style.css';
-// import {createProject, createTodo, createProjectList} from './create.js';
+import {createProject, createTodo, createProjectList} from './create.js';
 
 // create objects from stored data module (input:stored data, output:)
 // interact w DOM module, inputs from DOM => create/update object => 
@@ -7,39 +7,6 @@ import './style.css';
 
 // input: stored data => output: DOM elements w eventlisteners
 // convert user input => objects => stored data
-
-
-// 
-const createProject = (title, description, todoList) => {
-    return {
-    title: title, 
-    description: description,
-    todoList: todoList,
-    }
-}
-
-const createTodo = (project, title, description, dueDate, important) => {
-    return {
-        project: project,
-        title: title,
-        description: description,
-        dueDate: dueDate,
-        important: important,
-    }
-}
-
-// can filter for project property in todoList
-// this way I can filter by any todo property: project, important, date
-const createProjectList = (todoList, property, value) => {
-    const filteredList = [];
-    for (let todo of todoList){
-        // console.log('todo', todo);
-        if (todo[property] == value){
-            filteredList.push(todo);
-        }
-    }
-    return filteredList
-}
 
 const projectImportant = createProject("important", "blah", []);
 const project1 = createProject("project1", "blahblahblah", []);

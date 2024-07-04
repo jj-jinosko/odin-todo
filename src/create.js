@@ -1,6 +1,7 @@
 
+// does it make any difference to use the named function vs the variable assigned to an anonymous function?
 
-const createProject = (title, description, todoList) => {
+export const createProject = (title, description, todoList) => {
     return {
     title: title, 
     description: description,
@@ -8,7 +9,7 @@ const createProject = (title, description, todoList) => {
     }
 }
 
-const createTodo = (project, title, description, dueDate, important) => {
+export function createTodo(project, title, description, dueDate, important) {
     return {
         project: project,
         title: title,
@@ -20,7 +21,7 @@ const createTodo = (project, title, description, dueDate, important) => {
 
 // can filter for project property in todoList
 // this way I can filter by any todo property: project, important, date
-const createProjectList = (todoList, property, value) => {
+export function createProjectList(todoList, property, value) {
     const filteredList = [];
     for (let todo of todoList){
         // console.log('todo', todo);
@@ -32,4 +33,4 @@ const createProjectList = (todoList, property, value) => {
 }
 
 
-export default {createProject, createTodo, createProjectList}
+// export default {createProject, createTodo, createProjectList}
